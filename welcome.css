@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+/* stylingVcraze.css */
+
+body {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  background-color: bisque;
+  color:white;
+  min-height: 100vh;
+}
+
+
+
+#h1-el {
+ 
+  margin-top:0px;
+  font-weight: 900px;
+  text-align: center;
+  font-size : 60px;
+  color: darkblue;
+}
+
+#h2-el {
+
+  margin-top:60px;
+  text-align: center;
+  color:yellowgreen;
+  font-weight: 600px;
+  font-size: 50px;
+}
+
+
+
+button{
+    width: 200px;
+    
+    background-color:crimson;
+    font-size: 20px;
+    padding:20px;
+    font-weight: 300;
+    margin-left:300px;
+    margin-top:90px;
+    text-decoration: none;
+    
+}
+
+button:hover{
+	background-color:gold;
+	color:white;
+	
+}
+
+button a{
+	text-decoration: none;
+	color:white;
+	
+}
+
+button a:hover{
+	color:darkblue;
+	
+}
+
+
+
