@@ -3,14 +3,13 @@ import java.sql.*;
 public class StoringUsersAgeResultInDb {
 
 			public void storeInDatabase(String email,String BirthDate, String CurrentDate, String result){
-		        String url = "jdbc:mysql://localhost:3306/YearMonthDateCalculator";
-		        String uname = "vasu";
-		        String password = "23";
+		        String url = "jdbc:sqlite:/home/victoria/SqliteDBFile/YearMonthDateCalculator.db";
+
 		        String query = "UPDATE User SET DOB=?,currentDate=?,calculatedAge=? WHERE email=?";
 
 		        try {
-		            Class.forName("com.mysql.cj.jdbc.Driver");
-		            Connection con = DriverManager.getConnection(url, uname, password);
+		            Class.forName("org.sqlite.JDBC");
+		            Connection con = DriverManager.getConnection(url);
 		            PreparedStatement ps = con.prepareStatement(query);
 		            ps.setString(1, BirthDate);
 		            ps.setString(2, CurrentDate);
