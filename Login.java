@@ -23,8 +23,8 @@ public class Login extends HttpServlet {
 		
 		String query = "SELECT * FROM User WHERE email=? AND password=?";
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/YearMonthDateCalculator","vasu","23");
+			Class.forName("org.sqlite.JDBC");
+			Connection con = DriverManager.getConnection("jdbc:sqlite:/home/victoria/SqliteDBFile/YearMonthDateCalculator.db");
 			PreparedStatement ps = con.prepareStatement(query);
 			ps.setString(1,email);
 			ps.setString(2, password);
