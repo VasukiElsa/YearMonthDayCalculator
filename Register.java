@@ -16,8 +16,8 @@ public class Register extends HttpServlet {
 		String password = request.getParameter("password");
 		
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/YearMonthDateCalculator","vasu","23");
+			Class.forName("org.sqlite.JDBC");
+			Connection con = DriverManager.getConnection("jdbc:sqlite:/home/victoria/SqliteDBFile/YearMonthDateCalculator.db");
 			PreparedStatement ps = con.prepareStatement("INSERT INTO User(name,email,password) VALUES(?,?,?)");
 			ps.setString(1, name);
 			ps.setString(2, email);
